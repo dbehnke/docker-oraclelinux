@@ -12,5 +12,5 @@ RUN wget --quiet http://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_6
     conda update --yes --all && \
     conda clean --yes --tarballs
    
-CMD [ "/bin/bash", "-c", "python", "$PYTHON_PARAMETERS" ]
+CMD source /etc/profile.d/conda.sh && python $PYTHON_PARAMETERS
 
